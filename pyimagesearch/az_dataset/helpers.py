@@ -12,7 +12,7 @@ def load_az_dataset(datasetPath):
 		# parse the label and image from the row
 		row = row.split(",")
 		label = int(row[0])
-		image = np.array([int(x) for x in row[1:]], dtype="uint8")
+		image = np.array([int(float(x)) for x in row[1:]], dtype="uint8")
 
 		# images are represented as single channel (grayscale) images
 		# that are 28x28=784 pixels -- we need to take this flattened
